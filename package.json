@@ -6,15 +6,18 @@
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
+    "stdio": "tsx src/stdio.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
     "agents": "^0.20.1",
+    "tsx": "^4.19.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260801.1",
+    "@types/node": "^22.10.0",
     "typescript": "^7.0.2",
     "wrangler": "^4.118.0"
   }
