@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cruisefeed-mcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    { "pattern": "mcp.cruisefeed.io", "custom_domain": true }
+  ],
+  "durable_objects": {
+    "bindings": [{ "name": "CRUISEFEED_MCP", "class_name": "CruiseFeedMCP" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["CruiseFeedMCP"] }],
+  "vars": {
+    "API_BASE": "https://api.cruisefeed.io"
+  },
+  "observability": { "enabled": true }
+}
